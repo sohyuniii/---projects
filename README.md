@@ -1,5 +1,5 @@
 # --- projects
 
-## Cancer Types
+## [Cancer Types](https://github.com/sohyuniii/projects/tree/master/Cancer%20types)
   - 기간 : 2019.02.15 ~
-  - goal : Classification of cancer types based on DNA copy number variation 
+  -  : Classification of cancer types based on DNA copy number variation 
