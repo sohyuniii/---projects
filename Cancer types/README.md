@@ -1,7 +1,8 @@
-#### 0. 데이터 설명
+### 데이터 설명
 - TCGA barcode : the primary identifier to distinguish biospecimen data
 - Cytoband : band pattern formed on the chromosomes of cells undergoing a medium term <br>(the best time to examine the number of chromosomes , has a total of 862 information)
 
-#### 1. 
-- 조직에서 추출한 TCGA 데이터를 가지고 암 분류 모델기 만들기
-- 소변에서 추출한 데이터로 암 분류 모델기 만들기
+### Modeling
+#### 1. K100, K50 데이터 Classification으로 암의 패턴 파악
+#### 2. TCGA로 모델 fitting -> 소변 데이터로 test 
+- scale, robust_scale, minmax_scale, maxabs_scale 을 이용하여 accuracy 비교
