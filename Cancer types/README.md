@@ -4,5 +4,7 @@
 
 ### Modeling
 #### 1. K100, K50 데이터 Classification으로 암의 패턴 파악
-#### 2. TCGA로 모델 fitting -> 소변 데이터로 test 
+#### 2. TCGA 5-fold cross-validation mean accuracy 측정
 - scale, robust_scale, minmax_scale, maxabs_scale 을 이용하여 accuracy 비교
+- logistic, SVM, random forest, AdaBoost, GBM, LightGBM, XGBoost 
+#### 3. TCGA로 모델 fitting -> 소변 데이터로 test
