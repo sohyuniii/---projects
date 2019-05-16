@@ -8,3 +8,6 @@
 - scale, robust_scale, minmax_scale, maxabs_scale 을 이용하여 accuracy 비교
 - logistic, SVM, random forest, AdaBoost, GBM, LightGBM, XGBoost 모델 비교
 #### 3. TCGA로 모델 fitting -> 소변 데이터로 test
+
+### Refernce
+- [Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)](https://medium.com/kaggle-nyc/gradient-boosting-decision-trees-xgboost-vs-lightgbm-and-catboost-72df6979e0bb)
