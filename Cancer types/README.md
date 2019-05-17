@@ -10,4 +10,5 @@
 #### 3. TCGA로 모델 fitting -> 소변 데이터로 test
 
 ### Refernce
+- [Chen and Guestrin. XGBoost: A scalable tree boosting system](https://dl.acm.org/citation.cfm?id=2939785)
 - [Gradient Boosting Decision trees: XGBoost vs LightGBM (and catboost)](https://medium.com/kaggle-nyc/gradient-boosting-decision-trees-xgboost-vs-lightgbm-and-catboost-72df6979e0bb)
