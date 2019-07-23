@@ -156,21 +156,30 @@ UCE(train_miss,test_miss)
 ##### Visualization ##### 
 library(patchwork)
 library(ggthemes)
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+library(grid)
 
-df <- read.csv("plot_df.csv") 
+df <- read.csv("plot_df.csv")
+df <- read.csv("plot_df_sm.csv")
 df <- df[,1:5]
 df$Method <- factor(df$Method, levels=c("Mean","K-NN","MICE","MissForest"))
 
 mcar <- df %>% filter(na=='MCAR')
-mar <- df %>% filter(na=='MAR')
-mnar <- df %>% filter(na=='MNAR')
+mcar <- df %>% filter(na=='MAR')
+mcar <- df %>% filter(na=='MNAR')
 
 g1 <- ggplot(mcar %>% filter(criteria=='uce'),aes(Method,value,fill=How)) + 
   geom_bar(stat='identity', position=position_dodge()) + theme_hc() +
-  scale_fill_manual(values=c("#999999", "#E69F00"))
+  scale_fill_manual(values=c("#999999", "#E69F00")) + ylab("Error rate") +
+  theme(legend.position = "None") + xlab("")
 
 g2 <- ggplot(mcar %>% filter(criteria=='mse'),aes(Method,value,fill=How)) + 
   geom_bar(stat='identity', position=position_dodge()) + theme_hc() +
-  scale_fill_manual(values=c("#999999", "#E69F00"))
+  scale_fill_manual(values=c("#999999", "#E69F00")) + ylab("RMSE") +
+  theme(legend.position = "None")+ xlab("")
 
-g2 + g1 + plot_layout(ncol = 2)
+grid.arrange(g2,g1,ncol=2, top = "MCAR")
+grid.arrange(g2,g1,ncol=2, top = "MAR")
+grid.arrange(g2,g1,ncol=2, top = "MNAR")
